@@ -4,7 +4,7 @@
   "description": "Convert an Orbit.js schema to a Fortune schema (or individual models)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests needed (yet)\""
   },
   "repository": {
     "type": "git",
