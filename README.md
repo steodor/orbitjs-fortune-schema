@@ -2,7 +2,7 @@
 
 Convert an [Orbit.js](https://orbitjs.com) schema to a [Fortune](https://fortune.js.org) schema (or individual models).
 
-Because if you build an Orbit-based client app and you want to sync it with a [json:api](https://jsonapi.org/implementations/#server-libraries-node-js) source using Fortune, then you probably want to write your database schema once and have it shared between your client and server apps.
+**Why?** Because if you build an Orbit-based client app and you want to sync it with a [json:api](https://jsonapi.org/implementations/#server-libraries-node-js) source using Fortune, then you probably want to write your database schema once and have it shared between your client and server apps.
 
 This package currently assumes you write your schema in the Orbit.js format, and you want to import that in your server and translate it to a Fortune schema. The other way around presents a few challenges, namely `Object` and `Buffer` record types which have no correspondent in Orbit.js. Open an issue if you need it and want to discuss this.
 
