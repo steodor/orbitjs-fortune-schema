@@ -9,6 +9,7 @@ This package currently assumes you write your schema in the Orbit.js format, and
 ## Installation
 
 `npm install orbitjs-fortune-schema`
+
 (add either `--save` or `--save-dev` flag depending on your needs)
 
 ## Usage
