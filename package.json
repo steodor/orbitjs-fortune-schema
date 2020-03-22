@@ -1,6 +1,6 @@
 {
   "name": "orbitjs-fortune-schema",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convert an Orbit.js schema to a Fortune schema (or individual models)",
   "main": "index.js",
   "scripts": {
