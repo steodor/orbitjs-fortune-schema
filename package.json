@@ -1,0 +1,28 @@
+{
+  "name": "orbitjs-fortune-schema",
+  "version": "0.0.1",
+  "description": "Convert an Orbit.js schema to a Fortune schema (or individual models)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steodor/orbitjs-fortune-schema.git"
+  },
+  "keywords": [
+    "orbitjs",
+    "fortune",
+    "model",
+    "schema",
+    "convert",
+    "transform",
+    "translate"
+  ],
+  "author": "Teodor Sandu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steodor/orbitjs-fortune-schema/issues"
+  },
+  "homepage": "https://github.com/steodor/orbitjs-fortune-schema#readme"
+}

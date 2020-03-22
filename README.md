@@ -8,7 +8,8 @@ This package currently assumes you write your schema in the Orbit.js format, and
 
 ## Installation
 
-`npm install orbitjs-fortune-schema` (add either `--save` or `--save-dev` flag depending on your needs)
+`npm install orbitjs-fortune-schema`
+(add either `--save` or `--save-dev` flag depending on your needs)
 
 ## Usage
 
@@ -37,11 +38,11 @@ const orbitSchema = {
 You can convert it to Fortune like this:
 
 ```
-const { convertOrbitModelToFortuneModel, convertOrbitSchemaToFortuneSchema } = require('orbitjs-fortune-schema');
+const { orbitjsToFortuneModel, orbitjsToFortuneSchema } = require('orbitjs-fortune-schema');
 
-const fortuneModel = convertOrbitModelToFortuneModel(orbitSchema.model); // single model
+const fortuneModel = orbitjsToFortuneModel(orbitSchema.model); // single model
 
-const fortuneSchema = convertOrbitSchemaToFortuneSchema(orbitSchema); // entire schema
+const fortuneSchema = orbitjsToFortuneSchema(orbitSchema); // entire schema
 ```
 
 The resulting Fortune model will look like this:
