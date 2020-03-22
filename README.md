@@ -4,7 +4,7 @@ Convert an [Orbit.js](https://orbitjs.com) schema to a [Fortune](https://fortune
 
 **Why?** Because if you build an Orbit-based client app and you want to sync it with a [json:api](https://jsonapi.org/implementations/#server-libraries-node-js) source using Fortune, then you probably want to write your database schema once and have it shared between your client and server apps.
 
-This package currently assumes you write your schema in the Orbit.js format, and you want to import that in your server and translate it to a Fortune schema. The other way around presents a few challenges, namely `Object` and `Buffer` record types which have no correspondent in Orbit.js. Open an issue if you need it and want to discuss this.
+This package currently assumes you write your schema in the Orbit.js format, and you want to import that in your server and translate it to a Fortune schema. The other way around presents a few challenges, namely `Object` and `Buffer` record types which have no correspondent in Orbit.js. Need it? I'm open to discussion, just open an issue.
 
 ## Installation
 
@@ -14,7 +14,7 @@ This package currently assumes you write your schema in the Orbit.js format, and
 
 ## Usage
 
-This sample Orbit schema contains a single model with all currently supported attributes and relationships:
+1. Define your Orbit.js schema. This sample contains a single model with all currently supported attributes and relationships:
 
 ```
 const orbitSchema = {
@@ -36,17 +36,24 @@ const orbitSchema = {
 };
 ```
 
-You can convert it to Fortune like this:
+2. Convert it to Fortune (model by model or the entire schema at once)
 
 ```
-const { orbitjsToFortuneModel, orbitjsToFortuneSchema } = require('orbitjs-fortune-schema');
+// Single model
+const { orbitjsToFortuneModel } = require('orbitjs-fortune-schema');
 
-const fortuneModel = orbitjsToFortuneModel(orbitSchema.model); // single model
+const fortuneModel = orbitjsToFortuneModel(orbitSchema.model);
+```
+
+```
+// Entire schema
+const { orbitjsToFortuneSchema } = require('orbitjs-fortune-schema');
 
 const fortuneSchema = orbitjsToFortuneSchema(orbitSchema); // entire schema
 ```
 
-The resulting Fortune model will look like this:
+3. A resulting Fortune model will look like this:
+
 ```
   model: {
     // attributes:
@@ -66,7 +73,7 @@ The resulting Fortune model will look like this:
 
 ## Warning
 
-As you may have noticed, there are no more `attributes` and `relationships` objects in the resulting definition. So if one of your relationships has the same name as one of your attributes, the relationship will win. Do you need a warning or an error and the conversion to fail? I'm open to discussions, just open an issue.
+As you may have noticed, there are no more `attributes` and `relationships` objects in the resulting definition. So if one of your relationships has the same name as one of your attributes, the relationship will win and the attribute will be gone. Do you need a warning or an error and the conversion to fail? I'm open to discussion, just open an issue.
 
 <hr />
 
